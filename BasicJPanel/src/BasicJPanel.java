@@ -9,8 +9,13 @@
 */
 
 // Import the basic graphics classes.
+import com.sun.prism.*;
+
 import java.awt.*;
+import java.awt.Graphics;
 import javax.swing.*;
+
+import static java.awt.Color.PINK;
 
 public class BasicJPanel extends JPanel{
 
@@ -28,12 +33,26 @@ public class BasicJPanel extends JPanel{
       made visible or moved or whatever.
     */
     public void paintComponent(Graphics g){
-        g.drawLine(10,10,450,450); // Draw a line from (10,10) to (150,150)
-        g.drawOval(200, 200, 50, 50);
-    }
 
+        g.setColor(Color.WHITE);
+        g.fillOval(190, 248, 70, 70);
+
+        g.fillOval(200, 200, 50, 50);
+        g.fillOval(205, 160, 40, 40);
+
+        g.fillRect(0,350,500,320);
+        g.fillOval(-30, 320, 150, 100);
+
+
+
+
+    }
+    public void Wave(Graphics g, int x, int y){
+
+    }
     public static void main(String arg[]){
         JFrame frame = new JFrame("BasicJPanel");
+        //frame.setBackground(Color.CYAN);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500,500);
 
