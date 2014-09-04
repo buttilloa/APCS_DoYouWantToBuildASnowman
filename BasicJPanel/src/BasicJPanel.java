@@ -42,17 +42,27 @@ public class BasicJPanel extends JPanel{
 
         g.fillRect(0,350,500,320);
         g.fillOval(-30, 320, 150, 100);
-
+        Wave(g,250,220);
 
 
 
     }
     public void Wave(Graphics g, int x, int y){
+   //while( x < 880) {
+       g.setColor(Color.BLACK);
+       g.drawLine(x, y, x + 50, y + 50);
+       g.drawLine(x - 50, y, x - 100, y + 50);
+
+      x++;
+   //}
+
+
+
 
     }
     public static void main(String arg[]){
         JFrame frame = new JFrame("BasicJPanel");
-        //frame.setBackground(Color.CYAN);
+        //frame.setBackground(Color.LIGHT_GRAY);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500,500);
 
